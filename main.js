@@ -26,3 +26,31 @@ window.addEventListener('scroll', function () {
     header.classList.remove('scroll')
   }
 })
+/*CARROSEL/SLIDER COM O SWIPER*/
+const swiper = new Swiper('.swiper-container', {
+  sliderPerView: 1,
+  pagination: {
+    el: '.swiper-pagination'
+  },
+  mousewheel: true,
+  keyboard: true
+})
+
+/*SCROLLREVEAL- OTIMIZAÇÃO DE ROLAGEM DA PÁGINA*/
+const scrollreveal = ScrollReveal({
+  origin: 'top',
+  distance: '30px',
+  duration: 700,
+  reset: true
+})
+
+scrollreveal.reveal(
+  `#home .text, #home .image,
+   #about .text, #about .image,
+   #services header, #about .card,
+   #testimonials header, #testimonials .testimonials,
+   #contact .text, #contact .links`,
+  {
+    interval: 100
+  }
+)
